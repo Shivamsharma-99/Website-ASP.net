@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<h2>============= ViewData Details ==============</h2>
+<h2>@ViewData["Name"] </h2>
+<h2>@ViewData["rollno"] </h2>
+<h2>@ViewData["Current Date & Time"] </h2>
+<h2>@ViewData["email"] </h2>
+
+<ul>
+    @foreach (var item in (List<string>)ViewData["ListData"])
+    {
+        <li>@item</li>
+    }
+</ul>
+
+
+<h1>============= Session Details ==============</h1>
+<h1>@Session["Name"]</h1>
+<h1>@Session["rollno"]</h1>
+<h1>@Session["Current Date & Time"]</h1>
+<h1>@Session["email"] </h1>
+<ul>
+    @foreach (var item in (List<string>)Session["ListSession"])
+    {
+        <li>@item</li>
+    }
+</ul>
+
+
+
+<p>Use this area to provide additional information.</p>

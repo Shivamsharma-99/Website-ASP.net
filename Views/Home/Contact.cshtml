@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<h1>============= TempData Details ==============</h1>
+<h3>@TempData["Name"] </h3>
+<h3>@TempData["rollno"]</h3>
+<h3>@TempData["Current Date & Time"] </h3>
+<h3>@TempData["email"] </h3>
+
+<ul>
+    @foreach (var item in (List<string>)TempData["ListData"])
+    {
+        <li>@item</li>
+    }
+</ul>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
